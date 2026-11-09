@@ -12,10 +12,10 @@
       // Connectionstring: https://www.connectionstrings.com/sqlconnection/
 
       /* Connection string for locally installed SQL Server with Windows Authentication */
-      string connStr = @"Data Source=.;Initial Catalog=Northwind;Integrated Security=True;Encrypt=False";
+      //string connStr = @"Data Source=.;Initial Catalog=Northwind;Integrated Security=True;Encrypt=False";
 
       /* Connection string for SQL Server running in a docker container with SQL Server Authentication */
-      //string connStr = @"Data Source=localhost,14445;Initial Catalog=Northwind;user id=sa; password=G52ndT0ur;;Encrypt=False";
+      string connStr = @"Data Source=localhost,1433;Initial Catalog=Northwind;user id=sa; password=Q0N*8hi7TAG$o763&wZ!$%%J%tV9I!DZ1v3v4rVx;;Encrypt=False";
 
       IDbConnection con = null!;       // Verbindung deklarieren
       try

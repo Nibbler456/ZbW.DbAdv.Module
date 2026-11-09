@@ -32,7 +32,7 @@
     private void button1_Click(object sender, EventArgs e)
     {
       var con = new OleDbConnection(
-          "Provider=SQLOLEDB;Data Source=(local);Integrated Security=SSPI;Initial Catalog=playground");
+        "Provider=SQLOLEDB;Data Source=(local);user id=sa; password=Q0N*8hi7TAG$o763&wZ!$%%J%tV9I!DZ1v3v4rVx;Initial Catalog=playground");
       var adapter = new OleDbDataAdapter("SELECT * FROM Person", con);
 
       adapter.RowUpdated += new OleDbRowUpdatedEventHandler(this.onRowUpdated);

@@ -10,7 +10,8 @@
     static IDbCommand GetSelectAllCmd()
     {
       OleDbCommand cmd = new OleDbCommand();
-      cmd.Connection = new OleDbConnection("Provider=SQLOLEDB;Data Source=(local);Integrated Security=SSPI;Initial Catalog=playground");
+      cmd.Connection = new OleDbConnection("Provider=SQLOLEDB;Data Source=(local);user id=sa; password=Q0N*8hi7TAG$o763&wZ!$%%J%tV9I!DZ1v3v4rVx;Initial Catalog=playground");
+      //cmd.Connection = new OleDbConnection(@"Data Source=localhost,1433;Initial Catalog=playground;user id=sa; password=Q0N*8hi7TAG$o763&wZ!$%%J%tV9I!DZ1v3v4rVx;;Encrypt=False");
       cmd.CommandText = "SELECT * FROM Person; SELECT * FROM Contact";
       return cmd;
     }
@@ -50,7 +51,7 @@
       Print(ds);
 
       //----- store data as an XML file
-      //ds.WriteXml("data.xml", XmlWriteMode.WriteSchema);
+      ds.WriteXml("data.xml", XmlWriteMode.WriteSchema);
 
       //----- Show Datatables with use of Views
       var f = new Playground(ds);

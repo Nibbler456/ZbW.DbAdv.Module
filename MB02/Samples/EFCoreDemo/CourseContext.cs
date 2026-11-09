@@ -13,7 +13,7 @@ namespace EFCoreDemo
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server=.;Database=EFCoreDemo;Trusted_Connection=True;TrustServerCertificate=True");
+      optionsBuilder.UseSqlServer("Server=.;Database=EFCoreDemo;Trusted_Connection=True;TrustServerCertificate=True");
       
       //optionsBuilder.LogTo(Console.WriteLine);
     }
@@ -42,8 +42,7 @@ namespace EFCoreDemo
                 new Category { Id = 3, Name = "Science" }
             );
       #endregion
-
-
+      
       #region Add Tags
       var tags = new Dictionary<string, Tag>
             {
